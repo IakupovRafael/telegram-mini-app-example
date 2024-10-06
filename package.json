@@ -17,7 +17,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "serve": "json-server --watch ./src/server/db/index.js --routes ./src/server/routes.json --port 3001",
+    "serve": "json-server --watch ./src/server/db/index.js --routes ./src/server/routes.json --port 3001 --host 0.0.0.0",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
