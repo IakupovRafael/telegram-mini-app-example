@@ -1,6 +1,7 @@
 {
   "name": "telegram-mini-app-example",
   "version": "0.1.0",
+  "homepage": "https://iakupovrafael.github.io/telegram-mini-app-example",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -22,7 +23,9 @@
     "save-json-api": "node ./src/scripts/save-json-api.js",
     "build": "react-scripts build && npm run save-json-api",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "rm -rf build && npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "json-server": "^0.17.4",
     "node-fs": "^0.1.7"
   }
