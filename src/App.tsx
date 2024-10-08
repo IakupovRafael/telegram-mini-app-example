@@ -14,6 +14,7 @@ const predefinedData = [
 ];
 
 function App1() {
+  
   const [inputValue, setInputValue] = useState(''); // Состояние для отслеживания ввода пользователя
   const [filteredSuggestions, setFilteredSuggestions] = useState<null | { id: string; name: string }[]>(null); // Подсказки (null - скрыт)
   const [selectedValue, setSelectedValue] = useState(''); // Выбранное значение
