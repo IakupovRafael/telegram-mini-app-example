@@ -43,26 +43,25 @@ function App1() {
 
   return (
     <div className='App'>
-      <input
-        type='text'
-        value={inputValue}
-        onChange={handleInputChange}
-        placeholder='Введите имя...'
-      />
-      {/* Отображаем список подсказок, если есть введённый текст и фильтрованные результаты */}
-      {filteredSuggestions && filteredSuggestions.length > 0 && (
-        <ul>
-          {filteredSuggestions.map((suggestion) => (
-            <li key={suggestion.id} onClick={() => handleSuggestionClick(suggestion.name)}>
-              {suggestion.name}
-            </li>
-          ))}
-        </ul>
-      )}
-      {/* Отображаем сообщение, если нет подходящих подсказок */}
-      {filteredSuggestions && filteredSuggestions.length === 0 && (
-        <p>Нет подходящих результатов</p>
-      )}
+      <div className='input-container'>
+        <input
+          type='text'
+          value={inputValue}
+          onChange={handleInputChange}
+          placeholder='Введите имя...'
+          className='input-field'
+        />
+        {/* Отображаем список подсказок, если есть введённый текст и фильтрованные результаты */}
+        {filteredSuggestions && filteredSuggestions.length > 0 && (
+          <ul className='suggestions-list'>
+            {filteredSuggestions.map((suggestion) => (
+              <li key={suggestion.id} onClick={() => handleSuggestionClick(suggestion.name)}>
+                {suggestion.name}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
       {/* Отображаем выбранное значение */}
       {selectedValue && <p>Вы выбрали: {selectedValue}</p>}
     </div>
